@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book an Appointment | The Wellness Ascent</title>
+  <meta name="description" content="Book a psychotherapy, psychiatry or nutrition appointment in Kenya (in person or online) or Seychelles (online) with The Wellness Ascent.">
+  <meta name="theme-color" content="#0d5e63">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="book">
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="page-hero">
+      <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1800&q=70" alt="" width="1800" height="1000">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Book Appointment</span></nav>
+        <span class="eyebrow">Book Appointment</span>
+        <h1>Every journey begins with one step.</h1>
+        <p class="lead">A few simple questions and you are done. It takes less than three minutes.</p>
+      </div>
+      <svg class="curve" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 80V40C240 0 480 0 720 30s480 50 720 10v40z"/></svg>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <form class="wizard form-card" id="bookingForm" novalidate>
+          <ol class="progress" id="progress" aria-label="Booking progress">
+            <li class="bar" id="progressBar" aria-hidden="true"></li>
+            <li><span class="dot">1</span><span class="lbl">Location</span></li>
+            <li><span class="dot">2</span><span class="lbl">Service</span></li>
+            <li><span class="dot">3</span><span class="lbl">Session type</span></li>
+            <li><span class="dot">4</span><span class="lbl">Date & time</span></li>
+            <li><span class="dot">5</span><span class="lbl">Your details</span></li>
+            <li><span class="dot">6</span><span class="lbl">Review</span></li>
+          </ol>
+
+          <!-- STEP 1 -->
+          <fieldset class="wstep" data-step="1">
+            <legend class="sr-only">Location</legend>
+            <h2>Where will you receive care?</h2>
+            <p class="muted">This helps us show the options available to you.</p>
+            <div class="choice-grid">
+              <div class="choice"><input type="radio" name="country" id="cKenya" value="kenya"><label for="cKenya"><span class="ci"><i data-icon="building"></i></span><strong>Kenya</strong><small>In-person sessions in Nairobi or virtual sessions anywhere in Kenya.</small></label></div>
+              <div class="choice"><input type="radio" name="country" id="cSey" value="seychelles"><label for="cSey"><span class="ci"><i data-icon="video"></i></span><strong>Seychelles</strong><small>Secure virtual sessions from anywhere in Seychelles.</small></label></div>
+            </div>
+          </fieldset>
+
+          <!-- STEP 2 -->
+          <fieldset class="wstep" data-step="2">
+            <legend class="sr-only">Service</legend>
+            <h2>Which service do you need?</h2>
+            <p class="muted">Not sure? <a href="compass.html">Try the Wellness Compass</a>.</p>
+            <div class="choice-grid">
+              <div class="choice"><input type="radio" name="service" id="sTherapy" value="therapy"><label for="sTherapy"><span class="ci"><i data-icon="brain"></i></span><strong>Psychotherapy & Counselling</strong><small>Talk therapy for individuals, couples and families.</small></label></div>
+              <div class="choice"><input type="radio" name="service" id="sPsych" value="psychiatry"><label for="sPsych"><span class="ci"><i data-icon="psychiatry"></i></span><strong>Psychiatric Consultation</strong><small>Assessment, diagnosis and medication management.</small></label></div>
+              <div class="choice"><input type="radio" name="service" id="sNutri" value="nutrition"><label for="sNutri"><span class="ci"><i data-icon="nutrition"></i></span><strong>Nutrition & Dietetics</strong><small>Meal plans, weight and clinical nutrition.</small></label></div>
+            </div>
+            <div class="field" id="therapyFormatWrap" hidden>
+              <label for="therapyFormat">Who is the session for?</label>
+              <select id="therapyFormat" name="format"><option value="individual">Individual</option><option value="couples">Couples</option><option value="family">Family</option><option value="adolescent">Adolescent (under 18)</option></select>
+            </div>
+          </fieldset>
+
+          <!-- STEP 3 -->
+          <fieldset class="wstep" data-step="3">
+            <legend class="sr-only">Session type</legend>
+            <h2>How would you like to meet?</h2>
+            <p class="muted" id="typeNote">Choose the format that feels most comfortable.</p>
+            <div class="choice-grid">
+              <div class="choice"><input type="radio" name="type" id="tPhysical" value="physical"><label for="tPhysical"><span class="ci"><i data-icon="building"></i></span><strong>In person</strong><small>At our private practice in Nairobi.</small></label></div>
+              <div class="choice"><input type="radio" name="type" id="tVirtual" value="virtual"><label for="tVirtual"><span class="ci"><i data-icon="video"></i></span><strong>Virtual</strong><small>Secure video call from your phone or computer.</small></label></div>
+            </div>
+          </fieldset>
+
+          <!-- STEP 4 -->
+          <fieldset class="wstep" data-step="4">
+            <legend class="sr-only">Date and time</legend>
+            <h2>Choose your preferred date and time</h2>
+            <p class="muted">Times are shown in <strong id="tzLabel">Kenya time (UTC+3)</strong>. We will confirm the exact slot with you.</p>
+            <div class="form-grid mt-1">
+              <div class="field"><label for="date">Preferred date <span class="req">*</span></label><input type="date" id="date" name="date" required><div class="error" id="dateError">Please choose an available date (Monday–Saturday).</div></div>
+              <div class="field"><label for="altDate">Alternative date (optional)</label><input type="date" id="altDate" name="altDate"></div>
+            </div>
+            <p class="mt-1"><strong>Preferred time</strong></p>
+            <div class="times" id="times" role="radiogroup" aria-label="Preferred time"></div>
+            <p class="error" id="timeError" hidden>Please choose a time.</p>
+          </fieldset>
+
+          <!-- STEP 5 -->
+          <fieldset class="wstep" data-step="5">
+            <legend class="sr-only">Your details</legend>
+            <h2>Tell us a little about you</h2>
+            <p class="muted">Only what we need to confirm your appointment. Everything is kept confidential.</p>
+            <div class="form-grid mt-1">
+              <div class="field"><label for="firstName">First name <span class="req">*</span></label><input id="firstName" name="firstName" autocomplete="given-name" maxlength="60" required><div class="error">Please enter your first name.</div></div>
+              <div class="field"><label for="lastName">Last name <span class="req">*</span></label><input id="lastName" name="lastName" autocomplete="family-name" maxlength="60" required><div class="error">Please enter your last name.</div></div>
+              <div class="field"><label for="email">Email <span class="req">*</span></label><input id="email" type="email" name="email" autocomplete="email" maxlength="150" required><div class="error">Please enter a valid email address.</div></div>
+              <div class="field"><label for="phone">Phone / WhatsApp <span class="req">*</span></label><input id="phone" type="tel" name="phone" autocomplete="tel" maxlength="30" required placeholder="+254 / +248"><div class="error">Please enter a valid phone number.</div></div>
+              <div class="field"><label for="sessionLang">Preferred session language</label><select id="sessionLang" name="sessionLanguage"><option value="en">English</option><option value="fr">French</option></select></div>
+              <div class="field"><label for="firstVisit">Is this your first visit?</label><select id="firstVisit" name="firstVisit"><option value="yes">Yes, first time</option><option value="no">No, returning client</option></select></div>
+              <div class="field full"><label for="notes">Anything you would like us to know? (optional)</label><textarea id="notes" name="notes" maxlength="1000" placeholder="A brief note is enough — you can share more privately with your practitioner."></textarea></div>
+              <div class="hp" aria-hidden="true"><label for="bWebsite">Website</label><input id="bWebsite" name="website" tabindex="-1" autocomplete="off"></div>
+              <div class="field full"><label class="consent"><input type="checkbox" name="consent" value="yes" required><span>I consent to The Wellness Ascent storing my details securely to manage this appointment, as described in the <a href="privacy.html">Privacy Policy</a>.</span></label><div class="error">Consent is required to book.</div></div>
+            </div>
+          </fieldset>
+
+          <!-- STEP 6 -->
+          <fieldset class="wstep" data-step="6">
+            <legend class="sr-only">Review</legend>
+            <h2>Review your request</h2>
+            <p class="muted">Please check everything is correct before sending.</p>
+            <dl class="review" id="review" data-no-i18n></dl>
+            <p class="secure-note"><i data-icon="lock"></i>Your request is sent over an encrypted connection. This is a request — we will confirm availability by email or phone.</p>
+          </fieldset>
+
+          <!-- DONE -->
+          <div class="wstep" data-step="7">
+            <div class="success-box">
+              <div class="big-ic"><i data-icon="check-circle"></i></div>
+              <h2>Thank you — your request has been received.</h2>
+              <p class="lead">We will contact you within one working day to confirm your appointment and share next steps.</p>
+              <p class="muted">Your reference: <strong id="bookingRef" data-no-i18n></strong></p>
+              <div class="btn-row mt-2 justify-center"><a href="index.html" class="btn btn-teal">Back to home</a><a href="articles.html" class="btn btn-outline">Read our articles</a></div>
+            </div>
+          </div>
+
+          <div class="form-status" id="bookingStatus" role="status" aria-live="polite"></div>
+          <div class="wizard-nav" id="wizardNav">
+            <button type="button" class="btn btn-outline" id="prevBtn"><i data-icon="arrow-left"></i> Back</button>
+            <button type="button" class="btn btn-gold" id="nextBtn">Continue <i data-icon="arrow"></i></button>
+          </div>
+        </form>
+        <p class="note">Prefer to book by phone? Call <a data-site="phone" href="#"></a> or <a data-site="whatsapp" href="#" target="_blank" rel="noopener">message us on WhatsApp</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/js/i18n-fr.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/booking.js" defer></script>
+</body>
+</html>

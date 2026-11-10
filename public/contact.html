@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us | The Wellness Ascent</title>
+  <meta name="description" content="Contact The Wellness Ascent in Nairobi by phone, WhatsApp, email or our secure contact form. Office hours, location and emergency contacts for Kenya and Seychelles.">
+  <meta name="theme-color" content="#0d5e63">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="contact">
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="page-hero">
+      <img data-parallax src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1800&q=70" alt="" width="1800" height="1000">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Contact</span></nav>
+        <span class="eyebrow">Contact & enquiries</span>
+        <h1>We’re here to listen.</h1>
+        <p class="lead">Have a question, need help choosing a service or want to book by phone? Reach out — a friendly member of our team will respond within one working day.</p>
+      </div>
+      <svg class="curve" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 80V40C240 0 480 0 720 30s480 50 720 10v40z"/></svg>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <div class="info-list">
+            <div class="info-item"><div class="icon-circle"><i data-icon="phone"></i></div><div><h4>Phone</h4><a data-site="phone" href="#"></a></div></div>
+            <div class="info-item"><div class="icon-circle"><i data-icon="whatsapp"></i></div><div><h4>WhatsApp</h4><a data-site="whatsapp" href="#" target="_blank" rel="noopener">Chat with us on WhatsApp</a></div></div>
+            <div class="info-item"><div class="icon-circle"><i data-icon="mail"></i></div><div><h4>Email</h4><a data-site="email" href="#"></a></div></div>
+            <div class="info-item"><div class="icon-circle"><i data-icon="pin"></i></div><div><h4>Kenya office</h4><p data-site="address"></p></div></div>
+            <div class="info-item"><div class="icon-circle"><i data-icon="clock"></i></div><div><h4>Office hours (Kenya time)</h4><table class="hours-table"><tbody data-site-hours></tbody></table></div></div>
+          </div>
+        </div>
+
+        <form class="form-card reveal reveal-d1" id="contactForm" novalidate>
+          <h2>Send us a message</h2>
+          <p class="muted">Please do not include detailed medical information here. We will discuss your needs privately.</p>
+          <div class="form-grid mt-1">
+            <div class="field"><label for="cName">Full name <span class="req">*</span></label><input id="cName" name="name" autocomplete="name" maxlength="100" required><div class="error">Please enter your name.</div></div>
+            <div class="field"><label for="cEmail">Email <span class="req">*</span></label><input id="cEmail" type="email" name="email" autocomplete="email" maxlength="150" required><div class="error">Please enter a valid email address.</div></div>
+            <div class="field"><label for="cPhone">Phone</label><input id="cPhone" type="tel" name="phone" autocomplete="tel" maxlength="30" placeholder="+254 / +248"></div>
+            <div class="field"><label for="cCountry">Country</label><select id="cCountry" name="country"><option value="kenya">Kenya</option><option value="seychelles">Seychelles</option><option value="other">Other</option></select></div>
+            <div class="field full"><label for="cSubject">Subject <span class="req">*</span></label>
+              <select id="cSubject" name="subject" required><option value="">Select a topic…</option><option value="general">General enquiry</option><option value="services">Questions about services</option><option value="booking">Booking & appointments</option><option value="fees">Fees & payment</option><option value="corporate">Corporate & school programmes</option><option value="media">Media & partnerships</option></select><div class="error">Please choose a subject.</div></div>
+            <div class="field full"><label for="cMessage">Message <span class="req">*</span></label><textarea id="cMessage" name="message" maxlength="2000" required></textarea><div class="error">Please write a message.</div></div>
+            <div class="hp" aria-hidden="true"><label for="cWebsite">Website</label><input id="cWebsite" name="website" tabindex="-1" autocomplete="off"></div>
+            <div class="field full"><label class="consent"><input type="checkbox" name="consent" value="yes" required><span>I agree that my details will be used to respond to my enquiry, in line with the <a href="privacy.html">Privacy Policy</a>.</span></label><div class="error">Please accept to continue.</div></div>
+          </div>
+          <button class="btn btn-gold btn-block mt-1" type="submit">Send message <i data-icon="arrow"></i></button>
+          <div class="form-status" role="status" aria-live="polite"></div>
+          <p class="secure-note"><i data-icon="lock"></i>Your message is sent over an encrypted connection and stored securely.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section pt-0">
+      <div class="container">
+        <div class="map reveal"><iframe title="Map showing The Wellness Ascent in Nairobi" src="https://www.google.com/maps?q=Nairobi%2C%20Kenya&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      </div>
+    </section>
+
+    <section class="section section-cream" id="emergency">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow">Emergency contacts</span>
+          <h2>If you need help right now</h2>
+          <p class="lead">The Wellness Ascent is not an emergency service. If you or someone you know is in immediate danger or thinking about suicide, please contact emergency services straight away.</p>
+        </div>
+        <div class="grid g-2">
+          <div class="emergency-box reveal">
+            <h3><i data-icon="alert"></i>Kenya</h3>
+            <ul>
+              <li>National emergency: <a href="tel:999">999</a> or <a href="tel:112">112</a></li>
+              <li>Kenya Red Cross (toll-free): <a href="tel:1199">1199</a></li>
+              <li>Befrienders Kenya: <a href="tel:+254722178177">+254 722 178 177</a></li>
+              <li>Nearest hospital emergency department</li>
+            </ul>
+          </div>
+          <div class="emergency-box reveal reveal-d1">
+            <h3><i data-icon="alert"></i>Seychelles</h3>
+            <ul>
+              <li>Emergency services: <a href="tel:999">999</a></li>
+              <li>Seychelles Hospital, Victoria (Mahé) — emergency department</li>
+              <li>Nearest health centre or hospital on your island</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/js/i18n-fr.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/forms.js" defer></script>
+</body>
+</html>

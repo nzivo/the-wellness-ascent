@@ -1,0 +1,10 @@
+{
+  "name": "the-wellness-ascent",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The Wellness Ascent — bilingual (EN/FR) website and secure booking API for Kenya and Seychelles.",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": { "node": ">=18" }
+}
