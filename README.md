@@ -2,6 +2,36 @@
 
 A bilingual (English/French), responsive website for The Wellness Ascent, with a small built-in server for booking requests and contact messages. It needs only Node.js 18 or newer and has no other dependencies.
 
+## Deploy to Vercel
+
+The site deploys to Vercel as-is. The pages in `public/` are served as static files, and the forms are handled by serverless functions in `api/`. Files written on Vercel are not kept, so bookings and messages are saved in a free **Supabase** Postgres database.
+
+**1. Create the database (about 5 minutes)**
+1. Create a project at [supabase.com](https://supabase.com). Choose a region close to Kenya, such as Frankfurt or London.
+2. Open **SQL Editor → New query**, paste the contents of [`db/schema.sql`](db/schema.sql), and click **Run**.
+3. Open **Project Settings → API** and copy the **Project URL** and the **service_role** key. The service_role key is secret: never put it in front-end code.
+
+**2. Import the repo into Vercel**
+1. At [vercel.com/new](https://vercel.com/new), import `nzivo/the-wellness-ascent`.
+2. Leave **Framework Preset** as *Other*. `vercel.json` already sets everything else.
+3. Under **Environment Variables**, add:
+
+| Name | Value |
+|---|---|
+| `SUPABASE_URL` | Project URL from Supabase |
+| `SUPABASE_SERVICE_ROLE_KEY` | service_role key from Supabase |
+| `DATA_KEY` | output of `node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"` (**back this up**: without it, stored data can't be decrypted) |
+| `ADMIN_TOKEN` | a long random string, 32 or more characters |
+
+4. Click **Deploy**. Every push to `main` then redeploys the site automatically.
+
+**3. After deploying**
+- Submit a test booking, then read it back with `curl -H "Authorization: Bearer $ADMIN_TOKEN" https://<your-site>.vercel.app/api/admin/appointments`.
+- Add your own domain under **Project → Settings → Domains**, then update `public/robots.txt` and `public/sitemap.xml`.
+- *Optional:* add a rate-limit rule for `/api/*` in **Vercel Firewall**. The built-in rate limit is per function instance, so it only reduces abuse on Vercel rather than enforcing a hard cap.
+
+If the Supabase variables are missing, the forms do not lose data silently. They tell visitors to contact the practice by phone, WhatsApp or email instead.
+
 ## Run it locally
 
 ```bash
